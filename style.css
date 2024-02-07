@@ -1,0 +1,161 @@
+body {
+    background-color: #dcfade;
+    font-family: Arial, sans-serif;
+}
+
+/*h1*/
+h1 {
+    font-size: 36px;
+    text-align: center;
+    animation: colorChange 15s linear infinite;
+    
+}
+@keyframes colorChange {
+    0% {
+        color: #333;
+    }
+    25% {
+        color: #ff9900;
+    }
+    50% {
+        color: #0099cc;
+    }
+    75% {
+        color: #ff3366;
+    }
+    100% {
+        color: #029343;
+    }
+}
+
+/*h2, h3*/
+h2, h3 {
+    text-align: center;
+}
+
+/*Footer*/
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+.container-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Map + Hiking routes*/
+.two-column-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.map {
+    width: 40%;
+}
+.hiking-routes {
+    width: 100%;
+}
+/*Style the list*/
+.hiking-routes ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+/*Image containers*/
+.image-container {
+    margin: 0 auto; 
+    text-align: center; 
+}
+/*Gallery images*/
+.gallery-image {
+    width: 400px; 
+    height: 300px; 
+    object-fit: cover; 
+}
+
+/*Contact form*/
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/*table - About me*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #dcfade;
+}
+td:first-child {
+    text-align: right;
+}
+td:last-child {
+    text-align: left; 
+}
+
+/*Navigation menu*/
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 20px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #029343; 
+}
+/*Navigation menu - Animation*/
+nav a {
+    position: relative;
+}
+nav a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #029343;
+    transform: scaleX(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease-in-out;
+}
+nav a:hover::before {
+    transform: scaleX(1);
+}
